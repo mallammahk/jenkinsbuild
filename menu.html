@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<title>Insert title here</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+#menu
+{
+    /*Styling the menu width and height*/
+    list-style:none;
+    margin:0px auto 0px auto;
+    width:600px;
+    height:45px;
+    padding:0px 10px 0px 20px  ;
+     
+    /* Creating the curved corner of the border*/
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    /*Styling the background with fading effect*/
+     
+    background:#0FF0000;
+    background: -moz-linear-gradient(top, #FFF, #999);
+   /* background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to( #999));*/
+     
+    /*Making the shadow effect into the menu bar */
+    box-shadow: inset 1px 1px 10px #FFFFFF;
+    -moz-box-shadow: inset 1px 1px 10px #FFFFFF;
+    -webkit-box-shadow: inset 1px 1px 10px #FFFFFF;
+    border:1px solid #000;
+     
+     
+}
+#menu li /*Styling the li part of the menu*/
+{
+    float:left;
+    padding:4px 10px 4px 10px;
+    display: red;
+    position:relative;
+    text-align:center ;
+    text-font:bookmanoldstyle;
+    margin-right:30px;
+    margin-top:7px;
+    border:none;
+ 
+     
+}
+ 
+#menu li a /*Styling the link part of the menu li*/
+{
+    text-decoration:none;
+    color:#a32330;
+    text-shadow:1px 1px 10px #FFFF00;
+}
+#menu li:hover a /*Styling the link part of the menu li in hover state*/
+{
+    color:#FF0;
+    text-shadow:1px 1px 10px #99FF33;
+}
+</style>
+<body>
+<ul id="menu">
+<li><a href="home.jsp"><b>Home</a></li>
+<li><a href="#">Engineering</a></li>
+<li><a href="#">IT</a></li>
+<li><a href="#">Admin</a></li>
+<li><a href="#">Blog</a></li>
+</ul>
+</body>
+</html>
