@@ -1,0 +1,171 @@
+
+<html>
+<head>
+<title>Insert title here</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<script language="javascript">
+
+function validateForm()
+{
+	var cat=form.name.value;
+	if(cat=="")
+		{
+	alert("Please Enter Categeory Name");
+	document.form.name.focus();
+	return false;
+		}
+}
+
+ 
+ function deleteRecord(id)
+{
+	var r=confirm("Are You Sure want to Delete ?!");
+	if (r==true)
+	  {
+	
+    var f=document.form;
+    
+    f.method="post";
+    f.action='deletecategory.jsp?id='+id;
+    f.submit();
+	  }
+	
+}
+function editRecord(url)
+{
+	popupWindow=window.open(url,'id','titlebar=no, location=no,status=yes,menubar=no height=150,width=200,top=200,left=400');
+	if(window.focus)
+		{
+		popupWindow.focus();
+		}
+	return false;
+}
+/*function popupclosed()
+{
+	window.location.reload();
+}
+	
+	function parent_disable()
+	{
+		if(popupWindow && !popupWindow.closed)
+			popupWindow.focus();
+	}
+	*/
+</script>
+<style>
+#menu
+{
+    /*Styling the menu width and height*/
+    list-style:none;
+    margin:0px auto 0px 20px;
+    width:600px;
+    height:45px;
+    padding:0px 10px 0px 20px  ;
+     
+    /* Creating the curved corner of the border*/
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    /*Styling the background with fading effect*/
+     
+    background:#66FF00;
+    background: -moz-linear-gradient(top, #FFF, #999);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to( #999));
+     
+    /*Making the shadow effect into the menu bar */
+    box-shadow: inset 1px 1px 10px #FFFFFF;
+    -moz-box-shadow: inset 1px 1px 10px #FFFFFF;
+    -webkit-box-shadow: inset 1px 1px 10px #FFFFFF;
+    border:1px solid #000;
+     
+     
+}
+#menu li /*Styling the li part of the menu*/
+{
+    float:left;
+    padding:4px 10px 4px 10px;
+    display: block;
+    position:relative;
+    text-align:center ;
+    text-font:bookmanoldstyle;
+    margin-right:30px;
+    margin-top:7px;
+    border:none;
+ 
+     
+}
+ 
+#menu li a /*Styling the link part of the menu li*/
+{
+    text-decoration:none;
+    color:#FFF0000;
+    text-shadow:1px 1px 10px #FFFF00;
+}
+#menu li:hover a /*Styling the link part of the menu li in hover state*/
+{
+    color:#FF0;
+    text-shadow:1px 1px 10px #99FF33;
+}
+</style>
+<body>
+<div style="margin-bottom:50px">
+ <table align="right" >
+<tr><td><form action="Logout" method="post">
+    <input type="submit" value="Logout"  /><br><br>
+</form></td></tr> 
+</table></div>
+<div id="head3">
+<div id="head3">
+<div id="ima2">
+<img src="imges/ima2.jpg" ></div>
+	</div><br><br><br>
+	
+	</div><br>
+	<br>
+<ul id="menu">
+<li><a href="file.html"><b>Home</a></li>
+<li><a href="category.html">Category</a></li>
+<li><a href="#">products</a></li>
+<li><a href="#">Order</a></li>
+<li><a href="#">Change password</a></li>
+</ul>
+
+<div id="container1">
+<br>
+	  <div id="cat2">
+	  	<form name="form" action="Addcategory" method="post" onSubmit="return validateForm();">
+	 		Category:<input type="text" name="cat1" maxlenth="20">
+	 				 <input type="submit" name="submit" value="ADD">
+	 				 <input type="reset" name="clear" value="CLEAR" onClick="myFunction()">
+	  <!-- 	</form> -->
+	 <br>
+
+	 <div id="cat3">
+	<!--  <form name="form" action="category1.jsp" method="post">-->
+<center><h1> <font color="#FFFFCC">Category Data</font></h1></center>
+<table border="1" align="center" style="background-color:#FF9900" >
+<tr style="background-color:#FF9900">
+</div>
+	<th>ID</th>
+	<th>CATEGORY</th>
+	<th>REMOVE</th>
+	<th>MODIFY</th>
+</tr>
+<tr>
+		<td><center></center></td>
+		<td><center></center></td>
+		<td><input type="button" name="delete" value="Delete" style="background-color:green;font-weight:bold;color:#ffffff;" onclick="deleteRecord();" /></td>
+			<td><input type="button" name="edit" value="Modify" style="background-color:green;font-weight:bold;color:#ffffff;" onClick="return editRecord();" /></td>
+		</tr>
+		
+</table>
+</form><br>
+</div>
+<br><br>
+
+ </div><br>
+<a href="C:\Users\Mallamma HK\Desktop\web\footer.html"></a>
+
+</body>
+</html>
